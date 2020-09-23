@@ -21,7 +21,7 @@
     </script>
   </head>
   <body id="search" class='CoveoSearchInterface' data-enable-history="true">
-    <img src="https://www.characterworld.com/wp-content/uploads/2019/04/liv-Fuel.jpg" style="width:100%" />
+    <img src="https://i.gifer.com/Amte.gif" style="width:100%" />
     <div class="CoveoFolding"></div>
   <div class="CoveoAnalytics"></div>
   <div class="coveo-tab-section" style="font-family:Luckiest Guy;font-size:larger;background-image: url(" https://www.characterworld.com/wp-content/uploads/2019/04/liv-Fuel.jpg")>
@@ -35,6 +35,10 @@
     <div class="coveo-facet-column">
       <div class="CoveoDynamicFacet" data-title="Generations" data-field="@generations"></div>
       <div class="CoveoDynamicFacet" data-title="Type" data-field="@type" data-tab="All" data-number-of-values="5"></div>
+      <div id="facetslider1" class="CoveoFacetSlider" data-display-as-percent-enabled="false" data-end="200" data-prebind-field="fieldTranslator" 
+          data-field="@speed" data-range-slider="true" data-rounded="0" data-start="0"data-steps="20" data-title="Speed Range" data-date-field="false" 
+          data-applied-prebind="true">
+      </div>
       <div class="CoveoDynamicFacet" data-title="Type" data-id="sfcase-objecttype" data-field="@objecttype" data-tab="SalesforceCase"></div>
       <div class="CoveoDynamicFacet" data-title="Case Status" data-id="sfcase-sfcasestatus" data-field="@sfcasestatus" data-tab="SalesforceCase"></div>
       <div class="CoveoDynamicFacet" data-title="Case Priority" data-id="sfcase-sfcasespriority" data-field="@sfcasespriority" data-tab="SalesforceCase"></div>
@@ -71,13 +75,13 @@
       <div id="listView" class="CoveoResultList" data-layout="list" data-wait-animation="fade" data-auto-select-fields-to-include="true">
         <script id="Default" class="result-template" type="text/html" data-layout="list">
           <div class="coveo-result-frame">
-            <div class="coveo-result-cell" style="vertical-align:top;text-align:center;width:32px;">
+            <div class="coveo-result-cell" style="vertical-align:middle;text-align:center;width:32px;">
               <div class="CoveoImageFieldValue" data-field="@artwork"></div>
               <div class="CoveoQuickview"></div>
             </div>
             <div class="coveo-result-cell" style="vertical-align: top;padding-left: 16px;">
-              <div class="coveo-result-row" style="margin-top:0;">
-                <div class="coveo-result-cell" style="vertical-align:top;font-size:16px;font-family:Luckiest Guy" role="heading" aria-level="2">
+              <div class="coveo-result-row" style="margin-top:40%;">
+                <div class="coveo-result-cell" style="vertical-align:top;font-size:25px;font-family:Luckiest Guy" role="heading" aria-level="2">
                   <a>No.</a>
                   <a class="CoveoFieldValue" data-field="@nationalno"></a>
                   <a>-</a>
@@ -86,10 +90,10 @@
               </div>
               <div class="coveo-result-row" style="margin-top:10px;">
                 <div class="coveo-result-cell">
-                  <span class="CoveoFieldValue" data-field="@generations" data-text-caption="Generations" style="margin-right:30px;"></span>
-                  <span class="CoveoFieldValue" data-field="@species" data-text-caption="Species" style="margin-right:30px;"></span>
-                  <span class="CoveoFieldValue" data-field="@type" data-text-caption="Type" style="margin-right:30px;"></span>
-                  <span class="CoveoFieldValue" data-field="@speed" data-text-caption="Speed" style="margin-right:30px;"></span>
+                  <span class="CoveoFieldValue" data-field="@generations" data-text-caption="Generations" style="font-family:Luckiest Guy;margin-right:30px;"></span>
+                  <span class="CoveoFieldValue" data-field="@species" data-text-caption="Species" style="margin-right:30px;font-family:Luckiest Guy"></span>
+                  <span class="CoveoFieldValue" data-field="@type" data-text-caption="Type" style="margin-right:30px;font-family:Luckiest Guy"></span>
+                  <span class="CoveoFieldValue" data-field="@speed" data-text-caption="Speed" style="margin-right:30px;font-family:Luckiest Guy"></span>
                 </div>
               </div>
               <div class="coveo-result-row">
@@ -105,13 +109,14 @@
       <div id="cardView" class="CoveoResultList" data-layout="card" data-wait-animation="fade" data-auto-select-fields-to-include="true">
         <script id="Default1" class="result-template" type="text/html" data-layout="card">
           <div class="coveo-result-frame">
-            <div class="coveo-result-cell" style="vertical-align:top;text-align:center;width:32px;">
+            <div class="coveo-result-cell" style="vertical-align:middle;text-align:center;width:32px;">
               <div class="CoveoImageFieldValue" data-field="@artwork"></div>
+              <!-- <div class="CoveoImageFieldValue" data-field="@artwork" style="float:left;object-fit:cover;width:350px;height:350px;"></div> -->
               <div class="CoveoQuickview"></div>
             </div>
             <div class="coveo-result-cell" style="vertical-align: top;padding-left: 16px;">
-              <div class="coveo-result-row" style="margin-top:0;">
-                <div class="coveo-result-cell" style="vertical-align:top;font-size:16px;font-family:Luckiest Guy" role="heading" aria-level="2">
+              <div class="coveo-result-row" style="margin-top:8%;">
+                <div class="coveo-result-cell" style="vertical-align:top;font-size:25px;font-family:Luckiest Guy" role="heading" aria-level="2">
                   <a>No.</a>
                   <a class="CoveoFieldValue" data-field="@nationalno"></a>
                   <a>-</a>
@@ -120,10 +125,10 @@
               </div>
               <div class="coveo-result-row" style="margin-top:10px;">
                 <div class="coveo-result-cell">
-                  <span class="CoveoFieldValue" data-field="@generations" data-text-caption="Generations" style="margin-right:30px;"></span>
-                  <span class="CoveoFieldValue" data-field="@species" data-text-caption="Species" style="margin-right:30px;"></span>
-                  <span class="CoveoFieldValue" data-field="@type" data-text-caption="Type" style="margin-right:30px;"></span>
-                  <span class="CoveoFieldValue" data-field="@speed" data-text-caption="Speed" style="margin-right:30px;"></span>
+                  <span class="CoveoFieldValue" data-field="@generations" data-text-caption="Generations" style="margin-right:30px;font-family:Luckiest Guy"></span>
+                  <span class="CoveoFieldValue" data-field="@species" data-text-caption="Species" style="margin-right:30px;font-family:Luckiest Guy"></span>
+                  <span class="CoveoFieldValue" data-field="@type" data-text-caption="Type" style="margin-right:30px;font-family:Luckiest Guy"></span>
+                  <span class="CoveoFieldValue" data-field="@speed" data-text-caption="Speed" style="margin-right:30px;font-family:Luckiest Guy"></span>
                 </div>
               </div>
               <div class="coveo-result-row">
@@ -145,7 +150,7 @@
             </div>
             <div class="coveo-result-cell" style="vertical-align: top;padding-left: 16px;">
               <div class="coveo-result-row" style="margin-top:0;">
-                <div class="coveo-result-cell" style="vertical-align:top;font-size:16px;font-family:Luckiest Guy" role="heading" aria-level="2">
+                <div class="coveo-result-cell" style="vertical-align:top;font-size:25px;font-family:Luckiest Guy" role="heading" aria-level="2">
                   <a>No.</a>
                   <a class="CoveoFieldValue" data-field="@nationalno"></a>
                   <a>-</a>
@@ -154,10 +159,10 @@
               </div>
               <div class="coveo-result-row" style="margin-top:10px;">
                 <div class="coveo-result-cell">
-                  <span class="CoveoFieldValue" data-field="@generations" data-text-caption="Generations" style="margin-right:30px;"></span>
-                  <span class="CoveoFieldValue" data-field="@species" data-text-caption="Species" style="margin-right:30px;"></span>
-                  <span class="CoveoFieldValue" data-field="@type" data-text-caption="Type" style="margin-right:30px;"></span>
-                  <span class="CoveoFieldValue" data-field="@speed" data-text-caption="Speed" style="margin-right:30px;"></span>
+                  <span class="CoveoFieldValue" data-field="@generations" data-text-caption="Generations" style="margin-right:30px;font-family:Luckiest Guy"></span>
+                  <span class="CoveoFieldValue" data-field="@species" data-text-caption="Species" style="margin-right:30px;font-family:Luckiest Guy"></span>
+                  <span class="CoveoFieldValue" data-field="@type" data-text-caption="Type" style="margin-right:30px;font-family:Luckiest Guy"></span>
+                  <span class="CoveoFieldValue" data-field="@speed" data-text-caption="Speed" style="margin-right:30px;font-family:Luckiest Guy"></span>
                 </div>
               </div>
               <div class="coveo-result-row">
