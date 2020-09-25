@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" >
     <meta name="viewport" content="width=device-width, height=device-height" >
-    <title>Title</title>
+    <title>Pokédex</title>
     <link rel="stylesheet" href="./css/CoveoFullSearch.css"/>
     <link rel="stylesheet" href="./css/coveoextension.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Luckiest Guy">
@@ -16,20 +16,34 @@
           "shiquiao_org-shiquiaoorgnayied43",
           "xxe2616d11-127b-48fe-88d6-842451ba2e07"
         );
-        Coveo.init(document.body);
-      })
+
+        root = document.querySelector("#search");
+        Coveo.$$(root).on("querySuccess", function(e, args){
+        
+          console.log("e", e);
+          console.log("args", args);
+        
+          document.getElementById("query-detail").innerHTML = args.query.q; 
+        });
+         Coveo.init(root);
+       })
     </script>
   </head>
   <body id="search" class='CoveoSearchInterface' data-enable-history="true">
     <img src="https://i.gifer.com/Amte.gif" style="width:100%" />
     <div class="CoveoFolding"></div>
-  <div class="CoveoAnalytics"></div>
+  <!-- <div class="CoveoAnalytics"></div> -->
   <div class="coveo-tab-section" style="font-family:Luckiest Guy;font-size:larger;background-image: url(" https://www.characterworld.com/wp-content/uploads/2019/04/liv-Fuel.jpg")>
     <a class="CoveoTab" data-id="All" data-caption="Pokédex" ></a>
     <a class="CoveoTab" data-id="SalesforceCase" data-caption="About" data-expression="@objecttype==(case,casecomment)" ></a>
   </div>
   <div class="coveo-search-section">
     <div class="CoveoSearchbox" data-enable-omnibox="true"></div>
+  </div>
+  <div  class="coveo-search-section">
+    <p>Your searched &nbsp;</p>
+    <p id="query-detail"></p>
+    <p>, results appeared</p>
   </div>
   <div class="coveo-main-section" >
     <div class="coveo-facet-column">
@@ -74,6 +88,7 @@
 
       <div id="listView" class="CoveoResultList" data-layout="list" data-wait-animation="fade" data-auto-select-fields-to-include="true">
         <script id="Default" class="result-template" type="text/html" data-layout="list">
+          <div class="CoveoResultLink"></div>
           <div class="coveo-result-frame">
             <div class="coveo-result-cell" style="vertical-align:middle;text-align:center;width:32px;">
               <div class="CoveoImageFieldValue" data-field="@artwork"></div>
