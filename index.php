@@ -1,1 +1,0 @@
-<?php header( 'Location: search-ui-seed/pages/index.html' ) ;  ?>
