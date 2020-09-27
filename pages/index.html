@@ -13,8 +13,12 @@
     <script>
       document.addEventListener('DOMContentLoaded', function () {
         Coveo.SearchEndpoint.configureCloudV2Endpoint(
-          "shiquiao_org-shiquiaoorgnayied43",
-          "xxe2616d11-127b-48fe-88d6-842451ba2e07"
+          //"shiquiao_org-shiquiaoorgnayied43",
+          //"xxe2616d11-127b-48fe-88d6-842451ba2e07",
+          "shiquiao_org-shiquiaoorgekrn0tcc",
+          "xxf608d541-ceed-46d1-a3ce-f639c61b5ade"
+          // "https://platformhipaa.cloud.coveo.com/rest/search",
+          // { renewAccessToken: renewToken }
         );
 
         root = document.querySelector("#search");
@@ -47,10 +51,26 @@
   </div>
   <div class="coveo-main-section" >
     <div class="coveo-facet-column">
-      <div class="CoveoDynamicFacet" data-title="Generations" data-field="@generations"></div>
+      <div class="CoveoDynamicFacet" data-title="Generations" data-field="@generation"></div>
       <div class="CoveoDynamicFacet" data-title="Type" data-field="@type" data-tab="All" data-number-of-values="5"></div>
       <div id="facetslider1" class="CoveoFacetSlider coveo-disabled" data-end="160" 
           data-field="@speed" data-range-slider="true" data-rounded="0" data-start="0" data-title="Speed Range" data-date-field="false" 
+          data-graph="true" data-graph-steps="20">
+      </div>
+      <div id="facetslider1" class="CoveoFacetSlider coveo-disabled" data-end="160" 
+          data-field="@height" data-range-slider="true" data-rounded="0" data-start="0" data-title="Height Range" data-date-field="false" 
+          data-graph="true" data-graph-steps="20">
+      </div>
+      <div id="facetslider1" class="CoveoFacetSlider coveo-disabled" data-end="160" 
+          data-field="@weight" data-range-slider="true" data-rounded="0" data-start="0" data-title="Weight Range" data-date-field="false" 
+          data-graph="true" data-graph-steps="20">
+      </div>
+      <div id="facetslider1" class="CoveoFacetSlider coveo-disabled" data-end="160" 
+          data-field="@defense" data-range-slider="true" data-rounded="0" data-start="0" data-title="Defense Range" data-date-field="false" 
+          data-graph="true" data-graph-steps="20">
+      </div>
+      <div id="facetslider1" class="CoveoFacetSlider coveo-disabled" data-end="160" 
+          data-field="@attack" data-range-slider="true" data-rounded="0" data-start="0" data-title="Attack Range" data-date-field="false" 
           data-graph="true" data-graph-steps="20">
       </div>
       <div class="CoveoDynamicFacet" data-title="Type" data-id="sfcase-objecttype" data-field="@objecttype" data-tab="SalesforceCase"></div>
@@ -98,14 +118,14 @@
               <div class="coveo-result-row" style="margin-top:40%;">
                 <div class="coveo-result-cell" style="vertical-align:top;font-size:25px;font-family:Luckiest Guy" role="heading" aria-level="2">
                   <a>No.</a>
-                  <a class="CoveoFieldValue" data-field="@nationalno"></a>
+                  <a class="CoveoFieldValue" data-field="@nationalnum"></a>
                   <a>-</a>
                   <a class="CoveoFieldValue" data-field="@name"></a>
                 </div>
               </div>
               <div class="coveo-result-row" style="margin-top:10px;">
                 <div class="coveo-result-cell">
-                  <span class="CoveoFieldValue" data-field="@generations" data-text-caption="Generations" style="font-family:Luckiest Guy;margin-right:30px;"></span>
+                  <span class="CoveoFieldValue" data-field="@generation" data-text-caption="Generations" style="font-family:Luckiest Guy;margin-right:30px;"></span>
                   <span class="CoveoFieldValue" data-field="@species" data-text-caption="Species" style="margin-right:30px;font-family:Luckiest Guy"></span>
                   <span class="CoveoFieldValue" data-field="@type" data-text-caption="Type" style="margin-right:30px;font-family:Luckiest Guy"></span>
                   <span class="CoveoFieldValue" data-field="@speed" data-text-caption="Speed" style="margin-right:30px;font-family:Luckiest Guy"></span>
@@ -140,7 +160,7 @@
               </div>
               <div class="coveo-result-row" style="margin-top:10px;">
                 <div class="coveo-result-cell">
-                  <span class="CoveoFieldValue" data-field="@generations" data-text-caption="Generations" style="margin-right:30px;font-family:Luckiest Guy"></span>
+                  <span class="CoveoFieldValue" data-field="@generation" data-text-caption="Generations" style="margin-right:30px;font-family:Luckiest Guy"></span>
                   <span class="CoveoFieldValue" data-field="@species" data-text-caption="Species" style="margin-right:30px;font-family:Luckiest Guy"></span>
                   <span class="CoveoFieldValue" data-field="@type" data-text-caption="Type" style="margin-right:30px;font-family:Luckiest Guy"></span>
                   <span class="CoveoFieldValue" data-field="@speed" data-text-caption="Speed" style="margin-right:30px;font-family:Luckiest Guy"></span>
@@ -174,7 +194,7 @@
               </div>
               <div class="coveo-result-row" style="margin-top:10px;">
                 <div class="coveo-result-cell">
-                  <span class="CoveoFieldValue" data-field="@generations" data-text-caption="Generations" style="margin-right:30px;font-family:Luckiest Guy"></span>
+                  <span class="CoveoFieldValue" data-field="@generation" data-text-caption="Generations" style="margin-right:30px;font-family:Luckiest Guy"></span>
                   <span class="CoveoFieldValue" data-field="@species" data-text-caption="Species" style="margin-right:30px;font-family:Luckiest Guy"></span>
                   <span class="CoveoFieldValue" data-field="@type" data-text-caption="Type" style="margin-right:30px;font-family:Luckiest Guy"></span>
                   <span class="CoveoFieldValue" data-field="@speed" data-text-caption="Speed" style="margin-right:30px;font-family:Luckiest Guy"></span>
