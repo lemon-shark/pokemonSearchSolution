@@ -1,1 +1,1 @@
-web: npm run watch
+worker: npm run watch
