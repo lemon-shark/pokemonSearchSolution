@@ -9,6 +9,7 @@
     "build": "npm run setup && npm run css && webpack",
     "minimize": "webpack --minimize",
     "css": "node css.js",
+    "start": "node index.js",
     "watch": "npm run setup && npm run css && npx webpack --config webpack-serve.config --progress",
     "watchTest": "karma start",
     "snyk-protect": "snyk protect",
@@ -59,7 +60,7 @@
     "snyk": "^1.291.0"
   },
   "engines": {
-    "node": ">= 6.9.4",
+    "node": ">= 12.11.1",
     "npm": ">= 4.4.0"
   }
 }
