@@ -1,1 +1,1 @@
-web: npm run watch
+web: npm run setup && npm run css && npx webpack --config webpack-serve.config --progress
