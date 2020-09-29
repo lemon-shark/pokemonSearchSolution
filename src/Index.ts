@@ -2,4 +2,5 @@
 
 export { HelloWorld } from './ui/HelloWorld';
 export { QueryResult } from './ui/QueryResult';
+export { ClearQuery } from './ui/ClearQuery';
 

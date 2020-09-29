@@ -7,7 +7,7 @@
     "sourceMap": true
   },
   "include": [
-    "src/**/*.ts"
+    "src/**/*.ts", "src/ui/CustomCpmponent.js"
   ],
   "exclude": [
     "node_modules"

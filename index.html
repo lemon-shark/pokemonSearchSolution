@@ -22,19 +22,19 @@
         );
 
         root = document.querySelector("#search");
-        Coveo.$$(root).on("querySuccess", function(e, args){
+        // Coveo.$$(root).on("querySuccess", function(e, args){
         
-          console.log("e", e);
-          console.log("args", args);
+        //   console.log("e", e);
+        //   console.log("args", args);
         
-          document.getElementById("query-detail").innerHTML = args.query.q; 
-        });
+        //   document.getElementById("query-detail").innerHTML = "Your seached " + args.query.q + ", results appeared"; 
+        // });
          Coveo.init(root);
        })
     </script>
   </head>
   <body id="search" class='CoveoSearchInterface' data-enable-history="true">
-    <div class="CoveoHelloWorld"></div>
+    <!-- <div class="CoveoHelloWorld"></div> -->
     <img src="https://i.gifer.com/Amte.gif" style="width:100%" />
     <div class="CoveoFolding"></div>
   <!-- <div class="CoveoAnalytics"></div> -->
@@ -46,9 +46,7 @@
     <div class="CoveoSearchbox" data-enable-omnibox="true"></div>
   </div>
   <div  class="coveo-search-section">
-    <p>Your searched &nbsp;</p>
-    <p id="query-detail"></p>
-    <p>, results appeared</p>
+    <div id="query-detail" class="CoveoQueryResult"></div>
   </div>
   <div class="coveo-main-section" >
     <div class="coveo-facet-column">
