@@ -5,7 +5,7 @@ import {
     $$,
     QueryEvents,
     Initialization,
-    IQuerySuccessEventArgs
+    IQuerySuccessEventArgs,
   } from 'coveo-search-ui';
 
 export interface IQueryResultOptions {
@@ -32,12 +32,23 @@ constructor(public element: HTMLElement, public options: IQueryResultOptions, pu
 
   private handleQuerySuccess(args:  IQuerySuccessEventArgs) {
     if(args.query.q){
-      $$(this.element).text(args.query.q);
+      $$(this.element).text("You searched \"" + args.query.q + "\".");
+      this.clearQuery();
     } else {
       $$(this.element).text(this.options.noQuery);
     }
-    Coveo.$$('button', {class:"QueryController"}, "Clear Query");
 
+  }
+
+  private clearQuery(){
+    const clearButton = Coveo.$$('button', {class:'coveo-custom-button'}, 'Clear Query');
+    Coveo.$$(clearButton).on('click', ()=>{
+      this.queryStateModel.set('q', "");
+      this.queryController.executeQuery();
+    })
+    console.log(clearButton.el);
+    Coveo.$$(this.element).append(clearButton.el);
+    console.log(Coveo.$$(this.element));
   }
 }
 Initialization.registerAutoCreateComponent(QueryResult);

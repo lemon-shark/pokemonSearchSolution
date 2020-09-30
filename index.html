@@ -23,10 +23,8 @@
 
         root = document.querySelector("#search");
         // Coveo.$$(root).on("querySuccess", function(e, args){
-        
         //   console.log("e", e);
         //   console.log("args", args);
-        
         //   document.getElementById("query-detail").innerHTML = "Your seached " + args.query.q + ", results appeared"; 
         // });
          Coveo.init(root);
@@ -46,7 +44,7 @@
     <div class="CoveoSearchbox" data-enable-omnibox="true"></div>
   </div>
   <div  class="coveo-search-section">
-    <div id="query-detail" class="CoveoQueryResult"></div>
+    <div class="CoveoQueryResult"></div>
   </div>
   <div class="coveo-main-section" >
     <div class="coveo-facet-column">
